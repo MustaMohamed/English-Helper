@@ -92,15 +92,14 @@ public class AddNewListActivity extends AppCompatActivity {
         mNewWordsList = gson.fromJson(json, WordsList.class);
         ((EditText)(findViewById(R.id.edtxt_listName))).setText(getIntent().getStringExtra("listName"));
         ((EditText)(findViewById(R.id.edtxt_listName))).setEnabled(false);
-
         for(String tempWordName : mNewWordsList.getmEglishWordsList()) {
             mEnglishWords.remove(tempWordName);
             mCustomWordsList.remove(Pair.create(tempWordName, mNewWordsList.getmWordsList().
             get(tempWordName).getmTraslatedWords().get(0)));
+            mListVadapter.remove(Pair.create(tempWordName, mNewWordsList.getmWordsList().
+                    get(tempWordName).getmTraslatedWords().get(0)));
+            mListVadapter.notifyDataSetChanged();
         }
-
-
-
         initWordsList();
     }
 
