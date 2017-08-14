@@ -81,6 +81,7 @@ public class AddNewListActivity extends AppCompatActivity {
                 mListVadapter.remove(Pair.create(mTempCustomWordsList.get(pos).first,
                         mTempCustomWordsList.get(pos).second));
                 mListVadapter.notifyDataSetChanged();
+                initWordsList();
             }
         });
     }
@@ -97,6 +98,8 @@ public class AddNewListActivity extends AppCompatActivity {
             mCustomWordsList.remove(Pair.create(tempWordName, mNewWordsList.getmWordsList().
             get(tempWordName).getmTraslatedWords().get(0)));
         }
+
+
 
         initWordsList();
     }
@@ -162,13 +165,15 @@ public class AddNewListActivity extends AppCompatActivity {
         mTempEnglishWords = new ArrayList<>(AppWordsList.getmEglishWordsList());
         mWordsListView = (ListView)findViewById(R.id.lstV_newListWordsList);
         atocmpWordsSearch = (AutoCompleteTextView)findViewById(R.id.atocmptxtV_newListSearchForWord);
+        mListVadapter = new WordsListAdapter(this, mTempCustomWordsList);
+        mWordsListView.setAdapter(mListVadapter);
     }
 
     private void initWordsList() {
         mTempCustomWordsList = new ArrayList<>(mCustomWordsList);
         mTempEnglishWords = new ArrayList<>(mEnglishWords);
-        mListVadapter = new WordsListAdapter(this, mTempCustomWordsList);
-        mWordsListView.setAdapter(mListVadapter);
+        /*mListVadapter = new WordsListAdapter(this, mTempCustomWordsList);
+        mWordsListView.setAdapter(mListVadapter);*/
     }
 
     public void editListSearchable(String searchWord) {
