@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.musta.englishhelper.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+    <AutoCompleteTextView android:id="@+id/atocmptxtV_searchForWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColorHint="#D4D4D4"
+        android:hint="@string/hint_search" />
+
+        <ListView android:id="@+id/lstV_homeWordsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+
+    </LinearLayout>
+
+
+
+
+
+
+</FrameLayout>

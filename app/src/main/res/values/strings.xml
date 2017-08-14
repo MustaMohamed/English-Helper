@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">English Helper</string>
+    <string name="title_home">Home</string>
+    <string name="title_my_lists">My Lists</string>
+    <string name="title_quicke_test">Quick Test</string>
+    <string name="title_delete_list">Delete List</string>
+    <string name="title_start_test">Start Test</string>
+    <string name="hint_search">Search For Word</string>
+    <string name="title_list_name">Enter List Name</string>
+    <string name="hint_list_name">Bla Bla</string>
+    <string name="title_Test">Test</string>
+    <string name="menu_delete">Delete</string>
+    <string name="delete_all">Delete All</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_add_new_list">AddNewListActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>

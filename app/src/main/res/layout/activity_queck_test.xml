@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.musta.englishhelper.QuickTestActivity">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView android:id="@+id/txtV_wordMean"
+                android:text="Word"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:textColor="@color/colorPrimaryText"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Medium"/>
+
+            <EditText android:id="@+id/edtxtV_userWordTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-4dp"
+                android:paddingLeft="8dp"
+                android:textColor="@color/colorSecondaryText"
+                android:paddingRight="8dp"
+                android:textColorHint="@color/colorAccent"
+                android:hint="Enter the word here" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView android:id="@+id/txtV_wordStat"
+                android:layout_alignParentTop="true"
+                android:text="Word"
+                android:textColor="@color/colorSecondaryText"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Medium"/>
+
+            <Button android:id="@+id/btn_submitWords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtV_wordStat"
+                android:background="@drawable/my_button_bg"
+                android:textColor="@color/colorDivider"
+                android:text="Submit Word"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"/>
+
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btn_submitWords">
+
+            <Button android:id="@+id/btn_previousWord"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Previous Word"
+                android:background="@drawable/my_button_bg"
+                android:textColor="@color/colorDivider"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"/>
+
+            <Button android:id="@+id/btn_showWord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Show Word"
+                android:textSize="10sp"
+                android:background="@drawable/my_button_bg"
+                android:textColor="@color/colorDivider"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:textStyle="bold"/>
+
+            <Button android:id="@+id/btn_nextWord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Next Word"
+                android:textSize="10sp"
+                android:background="@drawable/my_button_bg"
+                android:textColor="@color/colorDivider"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+
+
+            <Button android:id="@+id/btn_resetWordsList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reset"
+                android:background="@drawable/my_button_bg"
+                android:textColor="@color/colorDivider"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
