@@ -180,7 +180,8 @@ public class AddNewListActivity extends AppCompatActivity {
         ArrayList<Pair<String, String>> searchList = new ArrayList<>(mCustomWordsList);
         for(Pair<String, String> word : searchList)
             if(!word.first.contains(searchWord)) mTempCustomWordsList.remove(word);
-        mListVadapter.notifyDataSetChanged();
+        mListVadapter = new WordsListAdapter(this, mTempCustomWordsList);
+        mWordsListView.setAdapter(mListVadapter);
     }
 
     private void saveToDataBase() {
